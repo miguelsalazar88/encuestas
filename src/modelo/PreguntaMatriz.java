@@ -4,7 +4,7 @@ public class PreguntaMatriz extends Pregunta{
     private String[] filas;
     private String[] columnas;
 
-    public PreguntaMatriz(int idEncuesta, String tipo, String pregunta,
+    public PreguntaMatriz(Encuesta idEncuesta, String tipo, String pregunta,
                           int tamanioFilas, int tamanioColumnas) {
         super(idEncuesta, tipo, pregunta);
         this.filas = new String[tamanioFilas];

@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public abstract class Pregunta {
 
-    protected int idEncuesta;
+    protected Encuesta encuesta;
     protected String tipo;
     protected String pregunta;
     protected ArrayList<Respuesta> respuestas;
 
-    public Pregunta(int idEncuesta, String tipo, String pregunta) {
-        this.idEncuesta = idEncuesta;
+    public Pregunta(Encuesta idEncuesta, String tipo, String pregunta) {
+        this.encuesta = idEncuesta;
         this.tipo = tipo;
         this.pregunta = pregunta;
         this.respuestas = new ArrayList<Respuesta>();
@@ -22,12 +22,12 @@ public abstract class Pregunta {
         this.respuestas.add(r);
     }
 
-    public int getIdEncuesta() {
-        return idEncuesta;
+    public Encuesta getEncuesta() {
+        return encuesta;
     }
 
-    public void setIdEncuesta(int idEncuesta) {
-        this.idEncuesta = idEncuesta;
+    public void setEncuesta(Encuesta encuesta) {
+        this.encuesta = encuesta;
     }
 
     public String getTipo() {

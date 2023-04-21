@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 public class Encuesta {
     private int idEncuesta;
-    private int ownerId;
+    private Usuario owner;
     private ArrayList<Pregunta> preguntas;
 
-    public Encuesta(int idEncuesta, int ownerId, ArrayList<Pregunta> preguntas) {
+    public Encuesta(int idEncuesta, Usuario ownerId, ArrayList<Pregunta> preguntas) {
         this.idEncuesta = idEncuesta;
-        this.ownerId = ownerId;
+        this.owner = ownerId;
         this.preguntas = preguntas;
     }
 
@@ -25,12 +25,12 @@ public class Encuesta {
         this.idEncuesta = idEncuesta;
     }
 
-    public int getOwnerId() {
-        return ownerId;
+    public Usuario getOwner() {
+        return owner;
     }
 
-    public void setOwnerId(int ownerId) {
-        this.ownerId = ownerId;
+    public void setOwner(Usuario owner) {
+        this.owner = owner;
     }
 
     public ArrayList<Pregunta> getPreguntas() {

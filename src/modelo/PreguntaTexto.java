@@ -1,7 +1,7 @@
 package modelo;
 
 public class PreguntaTexto extends Pregunta{
-    public PreguntaTexto(int idEncuesta, String tipo, String pregunta) {
+    public PreguntaTexto(Encuesta idEncuesta, String tipo, String pregunta) {
         super(idEncuesta, tipo, pregunta);
     }
 
