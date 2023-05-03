@@ -13,10 +13,22 @@ public class PreguntaSiNoNs extends Pregunta{
             System.out.println("No hay respuestas guardadas para esta pregunta.");
         }
 
-        int si, no, noSabe = 0;
+        int si = 0, no = 0, noSabe = 0;
 
         for (Respuesta r : this.respuestas) {
-            System.out.println("Respuesta");
+            if(((RespuestaSiNo) r).getSiNoNs() == 0){
+                si += 1;
+            } else if (((RespuestaSiNo) r).getSiNoNs() == 1) {
+                no += 1;
+            }
+            else{
+                noSabe += 1;
+            }
         }
+
+        System.out.println("Reporte Generado:");
+        System.out.println("Si: " + si);
+        System.out.println("No: " + no);
+        System.out.println("No sabe: " + noSabe);
     }
 }
