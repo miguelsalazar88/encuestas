@@ -2,36 +2,36 @@ package modelo;
 
 public abstract class Respuesta {
 
-    protected int idusuario;
-    protected int idEncuesta;
-    protected int idPregunta;
-    public Respuesta(int idusuario, int idEncuesta, int idPregunta) {
-        this.idusuario = idusuario;
-        this.idEncuesta = idEncuesta;
-        this.idPregunta = idPregunta;
+    protected Usuario usuario;
+    protected Encuesta encuesta;
+    protected Pregunta pregunta;
+    public Respuesta(Usuario usuario, Encuesta encuesta, Pregunta pregunta) {
+        this.usuario = usuario;
+        this.encuesta = encuesta;
+        this.pregunta = pregunta;
     }
 
-    public int getIdusuario() {
-        return idusuario;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setIdusuario(int idusuario) {
-        this.idusuario = idusuario;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
-    public int getIdEncuesta() {
-        return idEncuesta;
+    public Encuesta getEncuesta() {
+        return encuesta;
     }
 
-    public void setIdEncuesta(int idEncuesta) {
-        this.idEncuesta = idEncuesta;
+    public void setEncuesta(Encuesta encuesta) {
+        this.encuesta = encuesta;
     }
 
-    public int getIdPregunta() {
-        return idPregunta;
+    public Pregunta getPregunta() {
+        return pregunta;
     }
 
-    public void setIdPregunta(int idPregunta) {
-        this.idPregunta = idPregunta;
+    public void setPregunta(Pregunta idPregunta) {
+        this.pregunta = idPregunta;
     }
 }

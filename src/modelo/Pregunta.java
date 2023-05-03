@@ -7,13 +7,12 @@ public abstract class Pregunta {
     protected Encuesta encuesta;
     protected String tipo;
     protected String pregunta;
-    protected ArrayList<Respuesta> respuestas;
+    protected ArrayList<Respuesta> respuestas = new ArrayList<Respuesta>();
 
     public Pregunta(Encuesta idEncuesta, String tipo, String pregunta) {
         this.encuesta = idEncuesta;
         this.tipo = tipo;
         this.pregunta = pregunta;
-        this.respuestas = new ArrayList<Respuesta>();
     }
 
     public abstract void generarReporte();
@@ -44,5 +43,11 @@ public abstract class Pregunta {
 
     public void setPregunta(String pregunta) {
         this.pregunta = pregunta;
+    }
+
+    @Override
+    public String toString() {
+        return "Pregunta: " + pregunta + '\n' +
+                "Numero de Respuestas: " + respuestas.size() + "\n";
     }
 }

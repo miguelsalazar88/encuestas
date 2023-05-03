@@ -4,8 +4,8 @@ public class RespuestaSiNo extends Respuesta{
     // 0 para sí, 1 para no, 2 para no sabe/no responde
     private int siNoNs = -1;
 
-    public RespuestaSiNo(int idusuario, int idEncuesta, int idPregunta) {
-        super(idusuario, idEncuesta, idPregunta);
+    public RespuestaSiNo(Usuario usuario, Encuesta encuesta, Pregunta pregunta) {
+        super(usuario, encuesta, pregunta);
     }
 
     public int getSiNoNs() {

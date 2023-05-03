@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class Encuesta {
     private int idEncuesta;
     private Usuario owner;
-    private ArrayList<Pregunta> preguntas;
+    private ArrayList<Pregunta> preguntas = new ArrayList<Pregunta>();
 
-    public Encuesta(int idEncuesta, Usuario ownerId, ArrayList<Pregunta> preguntas) {
+    public Encuesta(int idEncuesta, Usuario ownerId) {
         this.idEncuesta = idEncuesta;
         this.owner = ownerId;
         this.preguntas = preguntas;

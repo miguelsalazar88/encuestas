@@ -9,6 +9,8 @@ public class PreguntaSiNoNs extends Pregunta{
     @Override
     public void generarReporte() {
 
+        System.out.println(this.toString());
+
         if(this.respuestas.size() == 0){
             System.out.println("No hay respuestas guardadas para esta pregunta.");
         }

@@ -2,18 +2,18 @@ package modelo;
 
 public class RespuestaMatriz extends Respuesta{
 
-    private boolean[][] matrizRespuesta;
+    private int[][] matrizRespuesta;
 
-    public RespuestaMatriz(int idusuario, int idEncuesta, int idPregunta, boolean[][] matrizRespuesta) {
-        super(idusuario, idEncuesta, idPregunta);
+    public RespuestaMatriz(Usuario usuario, Encuesta encuesta, Pregunta pregunta, int[][] matrizRespuesta) {
+        super(usuario, encuesta, pregunta);
         this.matrizRespuesta = matrizRespuesta;
     }
 
-    public boolean[][] getMatrizRespuesta() {
+    public int[][] getMatrizRespuesta() {
         return matrizRespuesta;
     }
 
-    public void setMatrizRespuesta(boolean[][] matrizRespuesta) {
+    public void setMatrizRespuesta(int[][] matrizRespuesta) {
         this.matrizRespuesta = matrizRespuesta;
     }
 }
