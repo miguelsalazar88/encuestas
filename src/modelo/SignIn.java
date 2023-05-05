@@ -12,7 +12,7 @@ public class SignIn {
         this.archivo = "dataBase/usuarios.txt";
     }
 
-    public boolean verificar(int id, String password) {
+    public Usuario verificar(int id, String password) {
         boolean encontrado = false;
         BufferedReader lector = null;
 

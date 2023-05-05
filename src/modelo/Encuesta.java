@@ -8,9 +8,9 @@ public class Encuesta {
     private Usuario owner;
     private ArrayList<Pregunta> preguntas = new ArrayList<Pregunta>();
 
-    public Encuesta(int idEncuesta, Usuario ownerId, String titulo) {
+    public Encuesta(int idEncuesta, Usuario owner, String titulo) {
         this.idEncuesta = idEncuesta;
-        this.owner = ownerId;
+        this.owner = owner;
         this.preguntas = preguntas;
         this.titulo = titulo;
     }

@@ -12,21 +12,21 @@ public class FactoryUsuario {
 
     public Usuario crearUsuario(){
 
-        System.out.print("Ingrese su nombre: ");
+        System.out.print("Ingrese su nombre: \n");
 
-        String nombre = input.nextLine();
+        String nombre = input.next();
 
-        System.out.print("Ingrese su apellido: ");
+        System.out.print("Ingrese su apellido: \n");
 
-        String apellido = input.nextLine();
+        String apellido = input.next();
 
-        System.out.print("Ingrese su id: ");
+        System.out.print("Ingrese su id: \n");
 
-        int id = Integer.parseInt(input.nextLine());
+        int id = Integer.parseInt(input.next());
 
-        System.out.print("Ingrese una contraseña: ");
+        System.out.print("Ingrese una contraseña: \n");
 
-        String password = input.nextLine();
+        String password = input.next();
 
         return new Usuario(id, password, nombre, apellido);
 
