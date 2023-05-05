@@ -34,4 +34,11 @@ public abstract class Respuesta {
     public void setPregunta(Pregunta idPregunta) {
         this.pregunta = idPregunta;
     }
+
+    @Override
+    public String toString() {
+        return "Para la pregunta " +
+                "pregunta=" + this.pregunta.getPregunta() +
+                '}';
+    }
 }

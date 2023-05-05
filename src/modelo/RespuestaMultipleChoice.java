@@ -11,6 +11,7 @@ public class RespuestaMultipleChoice extends Respuesta{
         this.opcion = opcion;
     }
 
+<<<<<<< HEAD
     public Integer getOpcion() {
 		return opcion;
 	}
@@ -30,4 +31,15 @@ public class RespuestaMultipleChoice extends Respuesta{
 
 	
 
+=======
+    public int getOpcion() {
+        return opcion;
+    }
+
+    public void setOpcion(int opcion) {
+        this.opcion = opcion;
+    }
+
+    
+>>>>>>> alejo
 }

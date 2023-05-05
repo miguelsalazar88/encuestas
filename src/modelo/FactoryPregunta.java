@@ -10,21 +10,20 @@ public class FactoryPregunta {
         this.input = input;
     }
 
-    public void crearPregunta(int tipo, Encuesta e){
+    public Pregunta crearPregunta(int tipo, Encuesta e){
         Pregunta p = null;
         if(tipo == 1){
-            p = crearPreguntaTexto(e);
+            return crearPreguntaTexto(e);
         }
         else if(tipo == 2){
-            p = crearPreguntaSiNoNs(e);
+            return crearPreguntaSiNoNs(e);
         }
         else if (tipo == 3) {
-            p = crearPreguntaMultipleChoice(e);
+            return crearPreguntaMultipleChoice(e);
         } else if (tipo == 4) {
-            p = crearPreguntaMatriz(e);
+            return crearPreguntaMatriz(e);
         }
-
-        e.addPregunta(p);
+        return null;
     }
 
     private PreguntaMatriz crearPreguntaMatriz(Encuesta e) {
