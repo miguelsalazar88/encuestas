@@ -19,7 +19,7 @@ public abstract class Pregunta {
     }
 
     public abstract void generarReporte();
-    public abstract Respuesta responder(Scanner input);
+    public abstract void responder(Scanner input);
 
     public void addRespuesta(Respuesta r){
         this.respuestas.add(r);

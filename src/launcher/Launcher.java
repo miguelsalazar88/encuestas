@@ -61,9 +61,11 @@ public class Launcher {
 
                 else if(opcionUsuario ==2){
                     System.out.println("Seleccione la encuesta que quiere responder");
-                    for (Encuesta e : sistema.getEncuestas()) {
-                        
+                    for (int i = 0; i < sistema.getEncuestas().size(); i++) {
+                        System.out.println((i+1) + ". " + sistema.getEncuestas().get(i));
                     }
+                    int encuestaSeleccionada = input.nextInt() - 1 ;
+                    sistema.getEncuestas().get(encuestaSeleccionada).responder(input);
                 }
 
             }

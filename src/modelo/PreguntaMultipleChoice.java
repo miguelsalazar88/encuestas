@@ -16,8 +16,8 @@ public class PreguntaMultipleChoice extends Pregunta{
     }
 
     @Override
-    public Respuesta responder(Scanner input) {
-        return null;
+    public void responder(Scanner input) {
+
     }
 
     public String[] getOpciones() {

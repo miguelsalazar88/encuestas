@@ -12,7 +12,6 @@ public class Encuesta {
     public Encuesta(int idEncuesta, Usuario owner, String titulo) {
         this.idEncuesta = idEncuesta;
         this.owner = owner;
-        this.preguntas = preguntas;
         this.titulo = titulo;
     }
 
