@@ -31,7 +31,7 @@ public class PreguntaMatriz extends Pregunta{
 
     @Override
     public void generarReporte() {
-        System.out.println("Reporte");
+        System.out.println("Reporte Matriz");
     }
 
     @Override
