@@ -2,7 +2,7 @@ package modelo;
 
 public class PreguntaSiNoNs extends Pregunta{
 
-    public PreguntaSiNoNs(Encuesta idEncuesta, String tipo, String pregunta) {
+    public PreguntaSiNoNs(Encuesta idEncuesta, int tipo, String pregunta) {
         super(idEncuesta, tipo, pregunta);
     }
 

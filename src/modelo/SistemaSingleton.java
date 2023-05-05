@@ -23,6 +23,19 @@ public class SistemaSingleton {
         }
         return instancia;
     }
+    
+    public void addUsuario(Usuario u){
+        this.usuarios.add(u);
+    }
+    
+    public void updateEncuestas(){
+        this.encuestas.clear();
+        for (Usuario u : this.usuarios) {
+            for (Encuesta e : u.getEncuestas()) {
+                this.encuestas.add(e);
+            }
+        }
+    }
 
     // getters y setters
     public ArrayList<Usuario> getUsuarios() {

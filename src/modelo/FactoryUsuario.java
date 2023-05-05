@@ -4,12 +4,13 @@ import java.util.Scanner;
 
 public class FactoryUsuario {
 
-    public FactoryUsuario() {
+    private Scanner input;
+
+    public FactoryUsuario(Scanner input) {
+        this.input = input;
     }
 
     public Usuario crearUsuario(){
-
-        Scanner input = new Scanner(System.in);
 
         System.out.print("Ingrese su nombre: ");
 

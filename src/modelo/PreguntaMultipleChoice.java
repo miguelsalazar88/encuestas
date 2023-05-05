@@ -3,7 +3,7 @@ package modelo;
 public class PreguntaMultipleChoice extends Pregunta{
     private String[] opciones;
 
-    public PreguntaMultipleChoice(Encuesta idEncuesta, String tipo, String pregunta, String[] opciones) {
+    public PreguntaMultipleChoice(Encuesta idEncuesta, int tipo, String pregunta, String[] opciones) {
         super(idEncuesta, tipo, pregunta);
         this.opciones = opciones;
     }

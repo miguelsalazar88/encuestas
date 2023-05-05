@@ -19,4 +19,8 @@ public class Usuario {
     public void addEncuesta(Encuesta e){
         this.encuestas.add(e);
     }
+
+    public ArrayList<Encuesta> getEncuestas() {
+        return encuestas;
+    }
 }

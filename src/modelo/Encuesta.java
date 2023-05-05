@@ -4,13 +4,23 @@ import java.util.ArrayList;
 
 public class Encuesta {
     private int idEncuesta;
+    private String titulo;
     private Usuario owner;
     private ArrayList<Pregunta> preguntas = new ArrayList<Pregunta>();
 
-    public Encuesta(int idEncuesta, Usuario ownerId) {
+    public Encuesta(int idEncuesta, Usuario ownerId, String titulo) {
         this.idEncuesta = idEncuesta;
         this.owner = ownerId;
         this.preguntas = preguntas;
+        this.titulo = titulo;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
     public void addPregunta(Pregunta p){

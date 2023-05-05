@@ -5,11 +5,13 @@ import java.util.ArrayList;
 public abstract class Pregunta {
 
     protected Encuesta encuesta;
-    protected String tipo;
+    // Tipos de pregunta: 1. Texto 2. Si/No/NoSabe 3. MultipleChoice 4. Matriz
+    protected int tipo;
+
     protected String pregunta;
     protected ArrayList<Respuesta> respuestas = new ArrayList<Respuesta>();
 
-    public Pregunta(Encuesta idEncuesta, String tipo, String pregunta) {
+    public Pregunta(Encuesta idEncuesta, int tipo, String pregunta) {
         this.encuesta = idEncuesta;
         this.tipo = tipo;
         this.pregunta = pregunta;
@@ -29,11 +31,11 @@ public abstract class Pregunta {
         this.encuesta = encuesta;
     }
 
-    public String getTipo() {
+    public int getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(int tipo) {
         this.tipo = tipo;
     }
 

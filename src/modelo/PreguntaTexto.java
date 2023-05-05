@@ -1,8 +1,8 @@
 package modelo;
 
 public class PreguntaTexto extends Pregunta{
-    public PreguntaTexto(Encuesta idEncuesta, String tipo, String pregunta) {
-        super(idEncuesta, tipo, pregunta);
+    public PreguntaTexto(Encuesta encuesta, int tipo, String pregunta) {
+        super(encuesta, tipo, pregunta);
     }
 
     @Override
