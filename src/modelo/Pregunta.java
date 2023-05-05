@@ -48,8 +48,17 @@ public abstract class Pregunta {
     public void setPregunta(String pregunta) {
         this.pregunta = pregunta;
     }
+    
+    
+    public ArrayList<Respuesta> getRespuestas() {
+		return respuestas;
+	}
 
-    @Override
+	public void setRespuestas(ArrayList<Respuesta> respuestas) {
+		this.respuestas = respuestas;
+	}
+
+	@Override
     public String toString() {
         return "Pregunta: " + pregunta + '\n' +
                 "Numero de Respuestas: " + respuestas.size() + "\n";
