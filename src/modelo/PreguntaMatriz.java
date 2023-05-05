@@ -1,6 +1,9 @@
 package modelo;
 
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class PreguntaMatriz extends Pregunta{
     private String[] filas;
@@ -36,6 +39,20 @@ public class PreguntaMatriz extends Pregunta{
 
     @Override
     public Respuesta responder(Scanner input) {
-        return null;
+        List<RespuestaMatriz> respuestasMatriz = new ArrayList<>();
+
+        System.out.println(this.getPregunta());
+        for (String fila : filas) {
+            System.out.println(fila);
+            for (int i = 0; i < columnas.length; i++) {
+                System.out.print(i + 1 + ". " + columnas[i] + " ");
+            }
+            System.out.print("\nElija una opción: ");
+            int opcion = input.nextInt();
+            input.nextLine();
+            respuestasMatriz.add(new RespuestaMatriz(fila, columnas[opcion - 1]));
+        }
+
+        Respuesta respuesta = new RespuestaMatriz(respuestasMatriz);
     }
 }

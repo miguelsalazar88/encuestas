@@ -1,6 +1,7 @@
 package modelo;
 
 import java.util.Scanner;
+import modelo.Respuesta;
 
 public class PreguntaSiNoNs extends Pregunta{
 
@@ -38,6 +39,22 @@ public class PreguntaSiNoNs extends Pregunta{
 
     @Override
     public Respuesta responder(Scanner input) {
-        return null;
+        System.out.println(this.getPregunta()); 
+        System.out.println("Por favor, ingrese su respuesta (s/n/ns):");
+        String respuesta = input.nextLine();
+
+        int siNoNs = -1; 
+        if (respuesta.equalsIgnoreCase("s")) {
+            siNoNs = 0; 
+        } else if (respuesta.equalsIgnoreCase("n")) {
+            siNoNs = 1; 
+        } else if (respuesta.equalsIgnoreCase("ns")) {
+            siNoNs = 2; 
+        }
+
+        RespuestaSiNo respuestaSiNo = new RespuestaSiNo();
+        respuestaSiNo.setSiNoNs(siNoNs);
     }
+
+
 }

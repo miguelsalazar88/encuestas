@@ -15,4 +15,19 @@ public class RespuestaSiNo extends Respuesta{
     public void setSiNoNs(int siNoNs) {
         this.siNoNs = siNoNs;
     }
+
+    @Override
+    public Usuario getUsuario() {
+        return super.getUsuario();
+    }
+
+    @Override
+    public Encuesta getEncuesta() {
+        return super.getEncuesta();
+    }
+
+    @Override
+    public Pregunta getPregunta() {
+        return super.getPregunta();
+    }
 }
