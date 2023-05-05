@@ -29,20 +29,20 @@ public class FactoryPregunta {
 
     private PreguntaMatriz crearPreguntaMatriz(Encuesta e) {
         System.out.println("Escriba el título de la pregunta: \n");
-        String pregunta = input.nextLine();
+        String pregunta = input.next();
         System.out.println("Escriba el numero de filas: \n");
         int numFilas = input.nextInt();
         String[] filas = new String[numFilas];
         for (int i = 0; i < numFilas; i++) {
             System.out.println("Escriba la fila " + (i+1) + ": ");
-            filas[i] = input.nextLine();
+            filas[i] = input.next();
         }
         System.out.println("Escriba el numero de columnas: \n");
         int numColumnas = input.nextInt();
         String[] columnas = new String[numColumnas];
         for (int i = 0; i < numColumnas; i++) {
             System.out.println("Escriba la fila " + (i+1) + ": ");
-            columnas[i] = input.nextLine();
+            columnas[i] = input.next();
         }
 
         return new PreguntaMatriz(e,4,pregunta,filas, columnas);
@@ -51,26 +51,26 @@ public class FactoryPregunta {
 
     private PreguntaMultipleChoice crearPreguntaMultipleChoice(Encuesta e) {
         System.out.println("Escriba el título de la pregunta: \n");
-        String pregunta = input.nextLine();
+        String pregunta = input.next();
         System.out.println("Escriba el numero de opciones: \n");
         int numOpciones = input.nextInt();
         String[] opciones = new String[numOpciones];
         for (int i = 0; i < numOpciones; i++) {
             System.out.println("Escriba la opcion " + (i+1) + ": ");
-            opciones[i] = input.nextLine();
+            opciones[i] = input.next();
         }
         return new PreguntaMultipleChoice(e,3,pregunta, opciones);
     }
 
     public PreguntaSiNoNs crearPreguntaSiNoNs(Encuesta e) {
         System.out.println("Escriba el título de la pregunta: \n");
-        String pregunta = input.nextLine();
+        String pregunta = input.next();
         return new PreguntaSiNoNs(e,2,pregunta);
     }
 
     public PreguntaTexto crearPreguntaTexto(Encuesta e) {
         System.out.println("Escriba el título de la pregunta: \n");
-        String pregunta = input.nextLine();
+        String pregunta = input.next();
         return new PreguntaTexto(e,1,pregunta);
     }
 
