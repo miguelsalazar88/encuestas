@@ -14,6 +14,11 @@ public class PreguntaTexto extends Pregunta{
 
     @Override
     public Respuesta responder(Scanner input) {
-        return null;
+        System.out.println(this.getPregunta());
+        System.out.println("Por favor, ingrese su respuesta:");
+        String respuesta = input.nextLine();
+
+        RespuestaTexto respuestaTexto = new RespuestaTexto();
+        respuestaTexto.setRespuesta(respuesta);
     }
 }

@@ -9,4 +9,13 @@ public class RespuestaMultipleChoice extends Respuesta{
         this.opcion = opcion;
     }
 
+    public int getOpcion() {
+        return opcion;
+    }
+
+    public void setOpcion(int opcion) {
+        this.opcion = opcion;
+    }
+
+    
 }
