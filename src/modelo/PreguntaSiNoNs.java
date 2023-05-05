@@ -14,31 +14,29 @@ public class PreguntaSiNoNs extends Pregunta{
 
         System.out.println(this.toString());
 
-        if(this.respuestas.size() == 0){
+        if (this.respuestas.size() == 0) {
             System.out.println("No hay respuestas guardadas para esta pregunta.");
-        }
+        } else {
+            int si = 0, no = 0, noSabe = 0;
 
-        int si = 0, no = 0, noSabe = 0;
-
-        for (Respuesta r : this.respuestas) {
-            if(((RespuestaSiNo) r).getSiNoNs() == 0){
-                si += 1;
-            } else if (((RespuestaSiNo) r).getSiNoNs() == 1) {
-                no += 1;
+            for (Respuesta r : this.respuestas) {
+                if (((RespuestaSiNo) r).getSiNoNs() == 0) {
+                    si += 1;
+                } else if (((RespuestaSiNo) r).getSiNoNs() == 1) {
+                    no += 1;
+                } else {
+                    noSabe += 1;
+                }
             }
-            else{
-                noSabe += 1;
-            }
-        }
 
-        System.out.println("Reporte Generado:");
-        System.out.println("Si: " + si);
-        System.out.println("No: " + no);
-        System.out.println("No sabe: " + noSabe);
+            System.out.println("Reporte Generado:");
+            System.out.println("Si: " + si);
+            System.out.println("No: " + no);
+            System.out.println("No sabe: " + noSabe);
+        }
     }
-
     @Override
-    public Respuesta responder(Scanner input) {
+    public void responder(Scanner input) {
         System.out.println(this.getPregunta()); 
         System.out.println("Por favor, ingrese su respuesta (s/n/ns):");
         String respuesta = input.nextLine();
@@ -52,8 +50,9 @@ public class PreguntaSiNoNs extends Pregunta{
             siNoNs = 2; 
         }
 
-        RespuestaSiNo respuestaSiNo = new RespuestaSiNo();
+        RespuestaSiNo respuestaSiNo = new RespuestaSiNo(null,this.encuesta, this);
         respuestaSiNo.setSiNoNs(siNoNs);
+        this.respuestas.add(respuestaSiNo);
     }
 
 

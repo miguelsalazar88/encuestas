@@ -23,7 +23,7 @@ public class Launcher {
                     int id = input.nextInt();
                     System.out.println("Contraseña: ");
                     String password;
-                    password= "x";//input.nextLine();
+                    password= input.next();
                     for (int p=0;p<sistema.getUsuarios().size();p++) {
                         Usuario user = sistema.getUsuarios().get(p);
                         if (user.getId() == id && password.equals(user.getPassword())) {

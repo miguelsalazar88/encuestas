@@ -9,16 +9,21 @@ public class PreguntaTexto extends Pregunta{
 
     @Override
     public void generarReporte() {
-        System.out.println();
+        System.out.println("Reporte de la pregunta:" +
+        this.getPregunta());
+        for(Respuesta r :super.respuestas)
+        {
+            System.out.println(r.pregunta+"\n");
+        }
     }
 
     @Override
-    public Respuesta responder(Scanner input) {
+    public void responder(Scanner input) {
         System.out.println(this.getPregunta());
         System.out.println("Por favor, ingrese su respuesta:");
         String respuesta = input.nextLine();
 
-        RespuestaTexto respuestaTexto = new RespuestaTexto();
-        respuestaTexto.setRespuesta(respuesta);
+        RespuestaTexto respuestaTexto = new RespuestaTexto(null,this.encuesta, this, respuesta);
+        this.respuestas.add(respuestaTexto);
     }
 }

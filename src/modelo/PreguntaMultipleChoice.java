@@ -24,7 +24,7 @@ public class PreguntaMultipleChoice extends Pregunta{
     }
 
     @Override
-    public Respuesta responder(Scanner input) {
+    public void responder(Scanner input) {
         System.out.println(this.getPregunta()); 
         System.out.println("Opciones:");
         for (int i = 0; i < opciones.length; i++) {
@@ -40,8 +40,10 @@ public class PreguntaMultipleChoice extends Pregunta{
                 input.next();
             }
         }
-        RespuestaMultipleChoice respuestaMultipleChoice = new RespuestaMultipleChoice(getUsuario(), getEncuesta(), this);
+        RespuestaMultipleChoice respuestaMultipleChoice = new RespuestaMultipleChoice(
+                null, getEncuesta(), this,respuesta);
         respuestaMultipleChoice.setOpcion(respuesta - 1);
+        this.respuestas.add(respuestaMultipleChoice);
 
     }
     
