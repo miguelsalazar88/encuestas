@@ -1,6 +1,7 @@
 package modelo;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Encuesta {
     private int idEncuesta;
@@ -13,6 +14,12 @@ public class Encuesta {
         this.owner = owner;
         this.preguntas = preguntas;
         this.titulo = titulo;
+    }
+
+    public void responder(Scanner input){
+        for (Pregunta p: this.getPreguntas()) {
+            p.responder(input);
+        }
     }
 
     public String getTitulo() {

@@ -1,6 +1,7 @@
 package modelo;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public abstract class Pregunta {
 
@@ -18,6 +19,7 @@ public abstract class Pregunta {
     }
 
     public abstract void generarReporte();
+    public abstract Respuesta responder(Scanner input);
 
     public void addRespuesta(Respuesta r){
         this.respuestas.add(r);

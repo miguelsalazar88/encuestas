@@ -1,5 +1,7 @@
 package modelo;
 
+import java.util.Scanner;
+
 public class PreguntaSiNoNs extends Pregunta{
 
     public PreguntaSiNoNs(Encuesta idEncuesta, int tipo, String pregunta) {
@@ -32,5 +34,10 @@ public class PreguntaSiNoNs extends Pregunta{
         System.out.println("Si: " + si);
         System.out.println("No: " + no);
         System.out.println("No sabe: " + noSabe);
+    }
+
+    @Override
+    public Respuesta responder(Scanner input) {
+        return null;
     }
 }

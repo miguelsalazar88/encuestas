@@ -1,5 +1,7 @@
 package modelo;
 
+import java.util.Scanner;
+
 public class PreguntaMultipleChoice extends Pregunta{
     private String[] opciones;
 
@@ -11,6 +13,11 @@ public class PreguntaMultipleChoice extends Pregunta{
     @Override
     public void generarReporte() {
         System.out.println("Reporte");
+    }
+
+    @Override
+    public Respuesta responder(Scanner input) {
+        return null;
     }
 
     public String[] getOpciones() {

@@ -1,5 +1,7 @@
 package modelo;
 
+import java.util.Scanner;
+
 public class PreguntaMatriz extends Pregunta{
     private String[] filas;
     private String[] columnas;
@@ -30,5 +32,10 @@ public class PreguntaMatriz extends Pregunta{
     @Override
     public void generarReporte() {
         System.out.println("Reporte");
+    }
+
+    @Override
+    public Respuesta responder(Scanner input) {
+        return null;
     }
 }
